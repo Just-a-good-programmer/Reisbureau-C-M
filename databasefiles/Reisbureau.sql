@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Gegenereerd op: 18 mei 2026 om 14:49
+-- Gegenereerd op: 19 mei 2026 om 10:02
 -- Serverversie: 8.4.8
 -- PHP-versie: 8.3.30
 
@@ -24,14 +24,15 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `User`
+-- Tabelstructuur voor tabel `Trip`
 --
 
-CREATE TABLE `User` (
-  `userid` int NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `password` varchar(250) NOT NULL,
-  `role` varchar(25) NOT NULL DEFAULT 'user'
+CREATE TABLE `Trip` (
+  `TripID` int NOT NULL,
+  `Location` varchar(255) NOT NULL,
+  `AccomodationID` int NOT NULL,
+  `FlightID` int NOT NULL,
+  `Price` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
@@ -39,20 +40,33 @@ CREATE TABLE `User` (
 --
 
 --
--- Indexen voor tabel `User`
+-- Indexen voor tabel `Trip`
 --
-ALTER TABLE `User`
-  ADD PRIMARY KEY (`userid`);
+ALTER TABLE `Trip`
+  ADD PRIMARY KEY (`TripID`),
+  ADD KEY `FK_AccomodationID` (`AccomodationID`),
+  ADD KEY `FK_FlightID` (`FlightID`);
 
 --
 -- AUTO_INCREMENT voor geëxporteerde tabellen
 --
 
 --
--- AUTO_INCREMENT voor een tabel `User`
+-- AUTO_INCREMENT voor een tabel `Trip`
 --
-ALTER TABLE `User`
-  MODIFY `userid` int NOT NULL AUTO_INCREMENT;
+ALTER TABLE `Trip`
+  MODIFY `TripID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- Beperkingen voor geëxporteerde tabellen
+--
+
+--
+-- Beperkingen voor tabel `Trip`
+--
+ALTER TABLE `Trip`
+  ADD CONSTRAINT `FK_AccomodationID` FOREIGN KEY (`AccomodationID`) REFERENCES `Accomodations` (`AccomodationID`),
+  ADD CONSTRAINT `FK_FlightID` FOREIGN KEY (`FlightID`) REFERENCES `Flights` (`FlightID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
