@@ -1,0 +1,87 @@
+body{
+    background-color: #F0EFE8;
+}
+
+.hamburgermenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.line {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+header {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.naam {
+    width: 400px;
+    margin-bottom: -25px;
+}
+
+.site-info {
+    flex-direction: column;
+    margin-bottom: 40px;
+    line-height: 20px;
+    border: #6C3BAA solid 2px;
+    width: 57%;
+    font-size: 20px;
+    padding: 5px;
+    justify-self: center;
+}
+
+.opsomming{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    margin-top: -15px;
+}
+
+.berichten{
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
+}
+
+.vraag{
+    margin-top: 52px;
+}
+
+.vakje{
+    width: 200px;
+    height: 35px;
+    background-color: #6C3BAA;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.footer{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    gap: 60px;
+    border: #6C3BAA solid 2px;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+}
+
