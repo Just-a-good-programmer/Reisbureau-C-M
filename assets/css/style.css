@@ -2,11 +2,30 @@ body{
     background-color: #f0efe8;
 }
 
+#filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 10px;
+}
+
+#luchthaven-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
 
 .filter-header {
-    width: 50%;
+    padding-left: 10px;
     background-color: #6c3baa;
     color: white;
     border-radius: 2.4px;
 }
-
