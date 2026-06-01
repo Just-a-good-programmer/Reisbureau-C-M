@@ -113,3 +113,28 @@ form {
     color: white;
     border-radius: 2.4px;
 }
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    gap: 10px;
+}
+
+.mail{
+    width: 550px;
+    height: 30px;
+}
+
+.beschrijving{
+    width: 550px;
+    height: 100px;
+}
+
+.send{
+    width: 50px;
+    height: 30px;
+    background-color: #6c3baa;
+    color: white;
+}
