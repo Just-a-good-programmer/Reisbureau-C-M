@@ -5,10 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoofdpagina</title>
     <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
 <body>
 <header>
+<div class="titel">
+    <img src="assets/img/tropical_sunset_logo_with_palm_2.png" alt="Logo">
+    <hi>Carmitch Reizen</hi>
+</div>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <!--
+            A fake / hidden checkbox is used as click reciever,
+            so you can use the :checked selector on it.
+            -->
+            <input type="checkbox" id="menuCheckbox" />
 
+            <!--
+            Some spans to act as a hamburger.
+
+            They are acting like a real hamburger,
+            not that McDonalds stuff.
+            -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!--
+            Too bad the menu has to be inside of the button
+            but hey, it's pure CSS magic.
+            -->
+            <ul id="menu">
+                <li><label for="menuCheckbox"><a>Info</a></label></li>
+                <li><label for="menuCheckbox"><a>Contact</a></label></li>
+
+            </ul>
+        </div>
+    </nav>
 
 </header>
 <main>
