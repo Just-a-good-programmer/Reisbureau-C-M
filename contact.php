@@ -21,14 +21,25 @@
 <div class="contact">
     <h1>Contact</h1>
     E-mailadres
-    <input class="mail" placeholder="e-mail">
+    <input class="mail" type="email" placeholder="E-mail">
     Onderwerp
-    <input class="mail" placeholder="onderwerp" role="option">
+    <input class="mail" type="text" placeholder="Onderwerp" role="option">
     Beschrijving
-    <input class="beschrijving" placeholder="beschrijving">
+    <input class="beschrijving" type="text" placeholder="Beschrijving">
     Telefoonnummer(optioneel)
-    <input class="mail" placeholder="telefoonnummer">
+    <input class="mail" type="number" placeholder="Telefoonnummer">
     <button class="send">Verzenden</button>
+</div>
+
+<div class="contact-footer">
+<div class="telefoonnummer">
+    <button class="nummer">+31 6 12345678</button>
+    <div class="informatie-bellen">
+        <h1>Bel ons</h1>
+        <p>maandag t/m vrijdag 09.00 - 21:00</p>
+        <p>zaterdag & zondag 10:00 - 17:00</p>
+    </div>
+</div>
 </div>
 
 </body>

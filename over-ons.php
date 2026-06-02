@@ -19,7 +19,7 @@
 </header>
 
 <div class="site-info">
-    <img src="afbeeldingen/carmitch.png" alt="naam" class="naam">
+    <img src="assets/img/carmitch.png" alt="naam" class="naam">
     <p>Welkom bij Reisbureau C&M! Wij helpen mensen al jaren met het vinden van een vakantie die écht bij hen past. We vinden het
         belangrijk dat reizen leuk, makkelijk en betaalbaar blijft. Daarom doen we altijd ons best om goede deals te vinden en
         duidelijke informatie te geven, zonder kleine lettertjes of onverwachte kosten.</p>
