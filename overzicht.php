@@ -1,6 +1,3 @@
-<?php
-require_once 'crud/read/read.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,8 +103,8 @@ require_once 'crud/read/read.php';
                 <label for="volpension">Volpension</label>
                 </div>
                 <div class="lodging-filter-item">
-                <input type="checkbox" id="all-inclusive" name="verzorging-keuze" value="All inclusive">
-                <label for="all-inclusive">All inclusive</label>
+                <input type="checkbox" id="all-inclusive" name="verzorging-keuze" value="All-inclusive">
+                <label for="all-inclusive">All-inclusive</label>
                 </div>
 
                 <div class="filter-header">
@@ -162,35 +159,6 @@ require_once 'crud/read/read.php';
                 <input type="submit" value="filter">
                 </div>
             </form>
-        </section>
-        <section id="selection-overview">
-            <div id="selection-overview-header">
-                <h1>Reisoverzicht</h1>
-            </div>
-            <div class="selection-overview-container">
-                
-                <?php foreach ($result as $row): ?>
-                    <div class="selection-overview-item">
-                    <div class="img-box">
-                    <h2><?php  echo $row['Location']; ?></h2>
-                    <div class="type-star-group">
-                    <h3><?php  echo $row['Type']; ?></h3>
-                    <p><?php for ($i = 0; $i < $row['Stars']; $i++): ?>
-                        <span>&#9733;</span>
-                    <?php endfor; ?></p>
-                    </div>
-                    <img src="./assets/img/Mallorca-picture.jpg" alt="<?php echo $row['Location']; ?>">
-                    </div>
-                    <div class="info-box">
-                        <div class="icon-group"><img src="./assets/img/calendar.png" alt="calendar" class="info-icon"><p><?php echo $row['Duration'] . ' dagen';?></p></div>
-                        <div class="icon-group"><img src="./assets/img/plane-silhouette.png" alt="transport" class="info-icon"><p><?php echo $row['Transport']; ?></p></div>
-                        <div class="icon-group"><img src="./assets/img/fork-and-knife.png" alt="lodging" class="info-icon"><p><?php echo $row['Lodging']; ?></p></div>
-                        <h2><?php echo '€ ' . $row['Price'] . ',-' . " per persoon"; ?></h2>
-                    </div>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-
         </section>
     </main>
     <footer>
