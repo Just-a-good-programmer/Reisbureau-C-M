@@ -12,6 +12,11 @@ document.getElementById("alle-luchthavens").addEventListener("click", function()
     }
 });
 
+// Might try to use this code for the star filter, but it doesn't work yet. 
+// I'm gonna try to use this to automatically the filters for changes, 
+// so I can remove the submit buttons. So if you click on a filter, 
+// it will automatically update the overview filters.
+
 var alleSterren = document.getElementById("alle-sterren");
 alleSterren.addEventListener("click", function() {
     if (this.checked) {
@@ -22,8 +27,8 @@ alleSterren.addEventListener("click", function() {
             } else {
                 starFilterItems[i].checked = false;
             }
-        }
-
+        }}
+    });
 var reviewFilterItems = document.getElementsByClassName("review-filter-item");
 const reviewFilterItemsChecked = [];
 for (var i = 0; i < reviewFilterItems.length; i++) {
@@ -40,5 +45,4 @@ for (var i = 0; i < reviewFilterItems.length; i++) {
         document.getElementById("review-checked").innerHTML = reviewFilterItemsChecked;
     });
     
-}
-    
+ }
