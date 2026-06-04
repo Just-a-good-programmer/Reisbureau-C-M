@@ -8,7 +8,7 @@
 
 
 </head>
-<body>
+<body class="flexbox-setting">
 <header>
 <div class="titel">
     <img src="assets/img/tropical_sunset_logo_with_palm_2.png" alt="Logo">
@@ -32,10 +32,6 @@
             <span></span>
             <span></span>
 
-            <!--
-            Too bad the menu has to be inside of the button
-            but hey, it's pure CSS magic.
-            -->
             <ul id="menu">
                 <li><label for="menuCheckbox"><a>Info</a></label></li>
                 <li><label for="menuCheckbox"><a>Contact</a></label></li>
@@ -45,7 +41,7 @@
     </nav>
 
 </header>
-<main>
+<main class="flexbox-setting">
     <div class="box">
         <div class="box-title">Vakanties</div>
         <form class="searchbox" action="" method="get">
