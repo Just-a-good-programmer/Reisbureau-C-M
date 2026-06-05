@@ -53,14 +53,71 @@ header {
     margin-top: -15px;
 }
 
-.berichten{
-    display: flex;
+.contact {
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
     flex-direction: column;
-    line-height: 5px;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+
+.afspraak{
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+
+.klacht{
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
 }
 
 .vraag{
-    margin-top: 52px;
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+
+.footer{
+    background-color: #6C3BAA;
+    margin-top: 50px;
+    border: #6C3BAA solid 2px;
+    height: 210px;
+    padding: 10px;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 10px;
+    justify-self: center;
+    justify-content: center;
 }
 
 .vakje{
@@ -72,18 +129,6 @@ header {
     justify-content: center;
     align-items: center;
     display: flex;
-}
-
-.footer{
-    display: flex;
-    justify-self: center;
-    justify-content: center;
-    gap: 60px;
-    border: #6C3BAA solid 2px;
-    width: 40%;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #f0efe8;
 }
 
 #filter {
@@ -114,14 +159,6 @@ form {
     border-radius: 2.4px;
 }
 
-.contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-self: center;
-    gap: 10px;
-
-}
 
 .mail{
     width: 550px;
@@ -146,7 +183,8 @@ form {
     flex-direction: row-reverse;
     display: flex;
     justify-self: flex-start;
-    margin-top: 50px;
+    margin-top: -5px;
+    width: 380px;
 }
 
 .nummer{
@@ -161,5 +199,11 @@ form {
 }
 
 .contact-footer{
-
+    margin-top: 50px;
+    border: #6C3BAA solid 2px;
+    height: 200px;
+    padding: 10px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
 }

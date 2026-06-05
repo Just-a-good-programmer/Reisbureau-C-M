@@ -32,15 +32,17 @@
 </div>
 
 <div class="contact-footer">
-<div class="telefoonnummer">
-    <button class="nummer">+31 6 12345678</button>
-    <div class="informatie-bellen">
-        <h1>Bel ons</h1>
-        <p>maandag t/m vrijdag 09.00 - 21:00</p>
-        <p>zaterdag & zondag 10:00 - 17:00</p>
+    <h1>Neem contact op</h1>
+    <div class="telefoonnummer">
+        <button class="nummer">+31 6 12345678</button>
+        <div class="informatie-bellen">
+            <h1>Bel ons</h1>
+            <p>maandag t/m vrijdag 09.00 - 21:00</p>
+            <p>zaterdag & zondag 10:00 - 17:00</p>
+        </div>
     </div>
 </div>
-</div>
+
 
 </body>
 

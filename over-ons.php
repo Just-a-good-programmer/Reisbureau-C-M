@@ -51,21 +51,23 @@
         telefoon of door een bericht achter te laten op onze website. We staan klaar om je te helpen en kijken ernaar uit om van je te horen!</p>
 </div>
 
+
 <div class="footer">
-    <div class="berichten">
+
         <div class="contact">
             <h2>Contact</h2>
             <p class="vakje">e-mail</p>
             <p class="vakje">telefoonnummer</p>
         </div>
+
         <div class="afspraak">
             <h2>Afspraak maken</h2>
             <p class="vakje">datum/tijd</p>
             <p class="vakje">locatie</p>
         </div>
-    </div>
 
-    <div class="berichten">
+
+
         <div class="klacht">
             <h2>Klachten en suggesties</h2>
             <p class="vakje">melding maken</p>
@@ -75,7 +77,7 @@
             <h2>Vraag stellen</h2>
             <p class="vakje">stel een vraag</p>
         </div>
-    </div>
+
 </div>
 
 </body>
