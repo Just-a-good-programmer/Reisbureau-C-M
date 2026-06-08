@@ -9,12 +9,6 @@
 </head>
 
 <header>
-    <div class="hamburgermenu">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-
     <h1>Over ons</h1>
 </header>
 
