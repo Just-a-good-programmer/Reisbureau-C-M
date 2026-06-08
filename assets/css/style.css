@@ -2,182 +2,14 @@ body{
     background-color: #F0EFE8;
 }
 
-.hamburgermenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 40px;
-    height: 50px;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-right: 10px;
-}
 
-.line {
-    width: 30px;
-    height: 4px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-header {
-    background-color: #6C3BAA;
-    color: white;
-    height: 60px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-.naam {
-    width: 400px;
-    margin-bottom: -25px;
-}
-
-.site-info {
-    flex-direction: column;
-    margin-bottom: 40px;
-    line-height: 20px;
-    border: #6C3BAA solid 2px;
-    width: 57%;
-    font-size: 20px;
-    padding: 5px;
-    justify-self: center;
-}
-
-.opsomming{
-    display: flex;
-    flex-direction: column;
-    line-height: 0px;
-    margin-top: -15px;
-}
-
-.berichten{
-    display: flex;
-    flex-direction: column;
-    line-height: 5px;
-}
-
-.vraag{
-    margin-top: 52px;
-}
-
-.vakje{
-    width: 200px;
-    height: 35px;
-    background-color: #6C3BAA;
-    color: white;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.footer{
-    display: flex;
-    justify-self: center;
-    justify-content: center;
-    gap: 60px;
-    border: #6C3BAA solid 2px;
-    width: 40%;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #f0efe8;
-}
-
-#filter {
+.flexbox-setting{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 10px;
-}
-
-#luchthaven-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.filter-header {
-    padding-left: 10px;
-    background-color: #6c3baa;
-    color: white;
-    border-radius: 2.4px;
-}
-
-#selection-overview {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 75%;
-    margin: 10px;
-}
-
-.selection-overview-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    height: auto;
     width: 100%;
-}
 
-.selection-overview-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.img-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 60%;
-}
-
-.info-box {
-    display: flex;
-    flex-direction: column;
-    background-color: #6c3baa;
-    color: white;
-    justify-content: center;
-    width: 40%;
-    height: 50%;
-    border-radius: 2.4px;
-    padding: 20px;
-    align-self: flex-end;
-    
-}
-.icon-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-}
-
-.info-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 500px;
-    background-color: #F0EFE8;
-}
-
-
-main{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .searchbox{
@@ -277,7 +109,7 @@ main{
 #menuToggle a
 {
     text-decoration: none;
-    color: #232323;
+    color: #FFFFFF;
 
     transition: color 0.3s ease;
 }
@@ -285,6 +117,8 @@ main{
 #menuToggle a:hover
 {
     color: #6C3BAA;
+    background-color: #FFFFFF;
+    border-radius: 10px;
 }
 
 
@@ -292,17 +126,10 @@ main{
 {
     display: block;
     width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-
+    height: 50px;
     cursor: pointer;
-
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 /*
@@ -311,9 +138,9 @@ main{
 #menuToggle span
 {
     display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+    width: 60px;
+    height: 3px;
+    margin-bottom: 15px;
     position: relative;
 
     background: #6C3BAA;
@@ -328,44 +155,70 @@ main{
     opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
-    transform-origin: 0% 0%;
+header {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-    transform-origin: 0% 100%;
+.naam {
+    width: 400px;
+    margin-bottom: -25px;
 }
 
+.site-info {
+    flex-direction: column;
+    margin-bottom: 40px;
+    line-height: 20px;
+    border: #6C3BAA solid 2px;
+    width: 57%;
+    font-size: 20px;
+    padding: 5px;
+    justify-self: center;
+}
 /*
  * Transform all the slices of hamburger
  * into a crossmark.
  */
+
 #menuToggle input:checked ~ span
 {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: #6C3BAA;
+    background: #FFFFFF;
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
+.opsomming{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    margin-top: -15px;
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-    transform: rotate(-45deg) translate(0, -1px);
+.berichten{
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
 }
 
+.vraag{
+    margin-top: 52px;
+}
+
+.vakje{
+    width: 200px;
+    height: 35px;
+    background-color: #6C3BAA;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
 /*
  * Make this absolute positioned
  * at the top left of the screen
@@ -375,16 +228,14 @@ main{
     position: absolute;
     max-width: 400px;
     width: 100vw;
-    max-height: 100vh;
-    margin: -100px 0 0 -50px;
+    height: 750px;
+    margin: -105px 0 0 -50px;
     padding: 50px;
     padding-top: 125px;
     box-sizing: border-box;
     overflow-y: auto;
-    background: #ededed;
+    background: #6C3BAA;
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
 
     transform-origin: 0% 0%;
     transform: translate(-100%, 0);
@@ -392,21 +243,49 @@ main{
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+
 #menu li
 {
     padding: 10px 0;
     font-size: 22px;
 }
 
-#menu li label
-{
-    cursor: pointer;
+.footer{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    gap: 60px;
+    border: #6C3BAA solid 2px;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #f0efe8;
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-    transform: none;
+#filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 10px;
+}
+
+#luchthaven-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.filter-header {
+    padding-left: 10px;
+    background-color: #6c3baa;
+    color: white;
+    border-radius: 2.4px;
 }
