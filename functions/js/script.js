@@ -27,12 +27,8 @@ alleSterren.addEventListener("click", function() {
             } else {
                 starFilterItems[i].checked = false;
             }
-<<<<<<< Updated upstream
         }}
     });
-=======
-        }
->>>>>>> Stashed changes
 var reviewFilterItems = document.getElementsByClassName("review-filter-item");
 const reviewFilterItemsChecked = [];
 for (var i = 0; i < reviewFilterItems.length; i++) {
@@ -49,9 +45,4 @@ for (var i = 0; i < reviewFilterItems.length; i++) {
         document.getElementById("review-checked").innerHTML = reviewFilterItemsChecked;
     });
     
-<<<<<<< Updated upstream
  }
-=======
-}}});
-    
->>>>>>> Stashed changes
