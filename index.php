@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoofdpagina</title>
     <link rel="stylesheet" href="assets/css/style.css">
-
-
 </head>
 <body class="flexbox-setting">
 <header>
@@ -67,12 +65,26 @@
                 <input class="input-box" placeholder="Hoeveel personen?" type="number" name="personen">
             </div>
             <input class="searchbutton" type="submit" value="Zoeken">
+<body>
+    <header>
+        
+        
+    </header>
+    <main>
+        <form action="" method="get">
+            <select>
+                <option value="Vliegreis">Vliegreis</option>
+                <option value="Treinreis">Treinreis</option>
+                <option value="Autoreis">Autoreis</option>
+            </select>
+
+            <input placeholder="Hoeveel personen?" type="number" name="personen">
+            <input type="submit" value="Zoek">
         </form>
-    </div>
-</main>
+    </main>
 
-<footer>
+    <footer>
 
-</footer>
+    </footer>
 </body>
 </html>

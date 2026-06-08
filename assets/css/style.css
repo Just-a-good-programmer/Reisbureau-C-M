@@ -5,7 +5,6 @@ body{
 
 .flexbox-setting{
     display: flex;
-    align-items: center;
     flex-direction: column;
     justify-content: space-between;
     height: auto;
@@ -126,18 +125,12 @@ body{
 #menuToggle input
 {
     display: block;
+    justify-content: space-around;
     width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-
+    height: 50px;
     cursor: pointer;
-
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
 /*
@@ -163,14 +156,19 @@ body{
     opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
-    transform-origin: 0% 0%;
+header {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-    transform-origin: 0% 100%;
+.naam {
+    width: 400px;
+    margin-bottom: -25px;
 }
 
 /*
@@ -182,23 +180,30 @@ body{
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #FFFFFF;
+
+}
+.site-info {
+    flex-direction: column;
+    margin-bottom: 40px;
+    line-height: 20px;
+    border: #6C3BAA solid 2px;
+    width: 57%;
+    font-size: 20px;
+    padding: 5px;
+    justify-self: center;
 }
 
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
+.opsomming{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    margin-top: -15px;
 }
 
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-    transform: rotate(-45deg) translate(0, -1px);
+.berichten{
+    display: flex;
+    flex-direction: column;
+    line-height: 5px;
 }
 
 /*
@@ -230,17 +235,59 @@ body{
 {
     padding: 10px 0;
     font-size: 22px;
+
+}
+.vraag{
+    margin-top: 52px;
 }
 
-#menu li label
-{
-    cursor: pointer;
+.vakje{
+    width: 200px;
+    height: 35px;
+    background-color: #6C3BAA;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-    transform: none;
+.footer{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    gap: 60px;
+    border: #6C3BAA solid 2px;
+    width: 40%;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #f0efe8;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 10px;
+}
+
+#luchthaven-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.filter-header {
+    padding-left: 10px;
+    background-color: #6c3baa;
+    color: white;
+    border-radius: 2.4px;
 }
