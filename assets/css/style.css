@@ -9,7 +9,56 @@ body{
     justify-content: space-between;
     height: auto;
     width: 100%;
+}
+.selection-overview-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
 
+.img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #6c3baa;
+    color: white;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    border-radius: 2.4px;
+    padding: 20px;
+    align-self: flex-end;
+    
+}
+.icon-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    background-color: #F0EFE8;
+}
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 .searchbox{

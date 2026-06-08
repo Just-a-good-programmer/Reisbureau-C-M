@@ -16,7 +16,7 @@ require_once 'crud/read/read.php';
 
     </header>
 
-    <main>
+    <main class="main-content">
         <section id="filter">
             <form action="" method="get">
                 <div class="filter-header">
