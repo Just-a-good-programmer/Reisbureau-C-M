@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Gegenereerd op: 12 jun 2026 om 10:18
+-- Gegenereerd op: 12 jun 2026 om 10:23
 -- Serverversie: 8.4.8
 -- PHP-versie: 8.3.30
 
@@ -107,7 +107,7 @@ CREATE TABLE `Trip` (
   `ReviewID` int NOT NULL,
   `Transport` varchar(50) NOT NULL,
   `Price` double NOT NULL,
-  `Sale_option` varchar(50) DEFAULT NULL COMMENT 'Of het scherp geprijsd is, en of kassakorting heeft. Bij geen van beide gewoon leeg laten',
+  `SaleOption` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'Of het scherp geprijsd is, en of kassakorting heeft. Bij geen van beide gewoon leeg laten',
   `Image` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'The image of the location'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -115,7 +115,7 @@ CREATE TABLE `Trip` (
 -- Gegevens worden geëxporteerd voor tabel `Trip`
 --
 
-INSERT INTO `Trip` (`TripID`, `Location`, `AccomodationID`, `FlightID`, `ReviewID`, `Transport`, `Price`, `Sale_option`, `Image`) VALUES
+INSERT INTO `Trip` (`TripID`, `Location`, `AccomodationID`, `FlightID`, `ReviewID`, `Transport`, `Price`, `SaleOption`, `Image`) VALUES
 (1, 'Zakynthos', 1, 1, 3, 'Via Eindhoven', 905, NULL, './assets/img/Zakynthos-beach.jpg'),
 (2, 'Zakynthos', 2, 2, 1, 'Via Eindhoven', 905, NULL, './assets/img/Zakynthos-beach-2.jpg'),
 (3, 'Barcelona', 3, 3, 2, 'Via Düsseldorf', 785, NULL, './assets/img/Barcelona.jpg'),
