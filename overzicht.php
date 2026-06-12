@@ -16,27 +16,27 @@ require_once 'crud/read/read.php';
 
     </header>
 
-    <main class="main-content">
+    <main>
         <section id="filter">
             <form action="" method="get">
                 <div class="filter-header">
                     <h2>Korting</h2>
                 </div>
-                <div class="">
+                <div class="sale-filter-item">
                 <input type="checkbox" id="scherp-geprijsd" name="korting-keuze" value="Scherp geprijsd">
                 <label for="scherp-geprijsd">Scherp geprijsd</label>
                 </div>
-                <div class="">
+                <div class="sale-filter-item">
                 <input type="checkbox" id="kassakorting" name="korting-keuze" value="Kassakorting">
                 <label for="kassakorting">Kassakorting</label>
                 </div>
-                <div class="filter-button">
-                <input type="submit" value="filter">
+                <div>
+                <input type="submit" value="Filter" class="filter-button">
                 </div>
                 <div class="filter-header">
                     <h2>Aantal sterren</h2>
                 </div>
-                <div class="star-filter-">
+                <div class="star-filter-item">
                 <input type="checkbox" id="1-ster" name="aantal-sterren-keuze" value="1">
                 <label for="1-ster">1 ster</label>
                 </div>
@@ -60,9 +60,6 @@ require_once 'crud/read/read.php';
 
                 <div class="filter-header">
                     <h2>Beoordeling</h2>
-                </div>
-                <div>
-                    <p id="review-checked"></p>
                 </div>
                 <div class="review-filter-group">
                 <input type="checkbox" class="review-filter-item" id="9-of-hoger" name="beoordeling-keuze" value="9">
@@ -158,8 +155,8 @@ require_once 'crud/read/read.php';
                 <input type="checkbox" id="optionele-huurauto" name="huurauto-keuze" value="Optionele huurauto">
                 <label for="optionele-huurauto">Optionele huurauto</label>
                 </div>
-                <div class="filter-button">
-                <input type="submit" value="filter">
+                <div>
+                <input type="submit" value="Filter" class="filter-button">
                 </div>
             </form>
         </section>
@@ -169,26 +166,28 @@ require_once 'crud/read/read.php';
             </div>
             <div class="selection-overview-container">
                 
-                <?php foreach ($result as $row): ?>
-                    <div class="selection-overview-item">
-                    <div class="img-box">
-                    <h2><?php  echo $row['Location']; ?></h2>
-                    <div class="type-star-group">
-                    <h3><?php  echo $row['Type']; ?></h3>
-                    <p><?php for ($i = 0; $i < $row['Stars']; $i++): ?>
-                        <span>&#9733;</span>
-                    <?php endfor; ?></p>
+                <?php foreach ($result as $row) { ?>
+                    <div class="selection-overview-item"> 
+                    <div class="img-box"> 
+                    <h2><?php echo $row['Location']; ?></h2>
+                    <div class="type-star-group"> 
+                    <h3><?php echo $row['Type']; ?></h3>
                     </div>
-                    <img src="./assets/img/Mallorca-picture.jpg" alt="<?php echo $row['Location']; ?>">
+                    <p>
+                    <?php for ($i = 0; $i < $row['Stars']; $i++) {
+                            echo '<span>&#9733;</span>';
+                        } ?>
+                    </p>
+                    <img src="<?php echo $row['Image']; ?>" alt="<?php echo $row['Location']; ?>">
                     </div>
                     <div class="info-box">
-                        <div class="icon-group"><img src="./assets/img/calendar.png" alt="calendar" class="info-icon"><p><?php echo $row['Duration'] . ' dagen';?></p></div>
+                        <div class="icon-group"><img src="./assets/img/calendar.png" alt="calendar" class="info-icon"><p><?php echo $row['Duration']; ?> dagen</p></div>
                         <div class="icon-group"><img src="./assets/img/plane-silhouette.png" alt="transport" class="info-icon"><p><?php echo $row['Transport']; ?></p></div>
                         <div class="icon-group"><img src="./assets/img/fork-and-knife.png" alt="lodging" class="info-icon"><p><?php echo $row['Lodging']; ?></p></div>
                         <h2><?php echo '€ ' . $row['Price'] . ',-' . " per persoon"; ?></h2>
+                    </div> 
                     </div>
-                    </div>
-                <?php endforeach; ?>
+                 <?php } ?>
             </div>
 
         </section>

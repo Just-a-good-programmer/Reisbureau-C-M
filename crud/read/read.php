@@ -1,6 +1,6 @@
 <?php
 require_once './crud/dbcall.php';
-$stmt = $conn->prepare("SELECT t.Location, t.AccomodationID, t.Transport, t.Price, a.Lodging, a.Type, a.Stars, f.Duration, f.Transfers   
+$stmt = $conn->prepare("SELECT t.Location, t.Image, t.SaleOption, t.AccomodationID, t.Transport, t.Price, a.Lodging, a.Type, a.Stars, f.Duration, f.Transfers   
 FROM Trip t 
 INNER JOIN Accomodations a on t.AccomodationID = a.AccomodationID
 INNER JOIN Flights f on t.FlightID = f.FlightID;");
