@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Gegenereerd op: 29 mei 2026 om 11:37
+-- Gegenereerd op: 12 jun 2026 om 10:18
 -- Serverversie: 8.4.8
 -- PHP-versie: 8.3.30
 
@@ -32,7 +32,7 @@ CREATE TABLE `Accomodations` (
   `Type` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'The type of accomodation',
   `Stars` int NOT NULL COMMENT 'The quality the accomodation has',
   `Lodging` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'The kind of lodging the accomodation has in terms of food coverage',
-  `RentalCar` int DEFAULT NULL COMMENT 'The availability of rental cars',
+  `RentalCar` varchar(50) DEFAULT NULL COMMENT 'The availability of rental cars',
   `Persons` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -41,9 +41,9 @@ CREATE TABLE `Accomodations` (
 --
 
 INSERT INTO `Accomodations` (`AccomodationID`, `Type`, `Stars`, `Lodging`, `RentalCar`, `Persons`) VALUES
-(1, 'Hotel', 5, 'Logies en ontbijt', NULL, 6),
+(1, 'Hotel', 5, 'Logies en ontbijt', 'Optionele huurauto', 6),
 (2, 'Hotel', 5, 'All inclusive', NULL, 6),
-(3, 'Vakantiehuis', 4, 'Logies', NULL, 4),
+(3, 'Vakantiehuis', 4, 'Logies', 'Inclusief huurauto', 4),
 (4, 'Appartement', 5, 'All inclusive', NULL, 2);
 
 -- --------------------------------------------------------
@@ -106,19 +106,21 @@ CREATE TABLE `Trip` (
   `FlightID` int NOT NULL,
   `ReviewID` int NOT NULL,
   `Transport` varchar(50) NOT NULL,
-  `Price` double NOT NULL
+  `Price` double NOT NULL,
+  `Sale_option` varchar(50) DEFAULT NULL COMMENT 'Of het scherp geprijsd is, en of kassakorting heeft. Bij geen van beide gewoon leeg laten',
+  `Image` varchar(250) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT 'The image of the location'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `Trip`
 --
 
-INSERT INTO `Trip` (`TripID`, `Location`, `AccomodationID`, `FlightID`, `ReviewID`, `Transport`, `Price`) VALUES
-(1, 'Cavo Vezal', 1, 1, 3, 'Via Eindhoven', 905),
-(2, 'Cavo Vezal', 2, 2, 1, 'Via Eindhoven', 905),
-(3, 'Barcelona', 3, 3, 2, 'Via Düsseldorf', 785),
-(4, 'Mallorca', 4, 2, 4, 'Via Schiphol', 901),
-(5, 'Aruba', 2, 1, 5, 'Via Amsterdam', 895);
+INSERT INTO `Trip` (`TripID`, `Location`, `AccomodationID`, `FlightID`, `ReviewID`, `Transport`, `Price`, `Sale_option`, `Image`) VALUES
+(1, 'Zakynthos', 1, 1, 3, 'Via Eindhoven', 905, NULL, './assets/img/Zakynthos-beach.jpg'),
+(2, 'Zakynthos', 2, 2, 1, 'Via Eindhoven', 905, NULL, './assets/img/Zakynthos-beach-2.jpg'),
+(3, 'Barcelona', 3, 3, 2, 'Via Düsseldorf', 785, NULL, './assets/img/Barcelona.jpg'),
+(4, 'Mallorca', 4, 2, 4, 'Via Schiphol', 901, NULL, './assets/img/Mallorca-image-1.png'),
+(5, 'Aruba', 2, 1, 5, 'Via Amsterdam', 895, NULL, './assets/img/Aruba.jpg');
 
 -- --------------------------------------------------------
 
