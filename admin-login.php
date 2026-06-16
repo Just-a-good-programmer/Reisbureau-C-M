@@ -3,40 +3,43 @@
 // LOGIN VERWERKING
 // ----------------------
 if (isset($_POST['inloggen'])) {
-
-    $user = $_POST['username'];
-    $pass = $_POST['password'];
-
-    if ($user === "admin" && $pass === "admin") {
-        header("Location: /admin.php");
+    if ($_POST['username'] === "admin" && $_POST['password'] === "admin") {
+        header("Location: /admin");
         exit;
     } else {
         $error = "Foutieve inloggegevens";
     }
+
+    if (isset($_POST['inloggen'])) {
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+
+        // hier check je of het klopt
+    }
 }
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<body lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
 <header>
     <h1>Admin Login</h1>
 </header>
 
 <form method="POST" class="admin-login-box" id="login-box">
-    <input class="admin-input" type="text" name="username" placeholder="Username" required>
-    <input class="admin-input" type="password" name="password" placeholder="Password" required>
-
-    <button class="admin-btn" type="submit" name="inloggen">Login</button>
-
-    <?php if (isset($error)) echo "<p style='color:rgb(255 0 89 / 0);'>$error</p>"; ?>
+    <input class="admin-input" type="text" name="username" placeholder="Username" >
+    <input class="admin-input" type="password" name="password" placeholder="Password">
+    <a class="admin-btn" href="admin.php">Login</a>
 </form>
 
 </body>
+
 </html>
+
