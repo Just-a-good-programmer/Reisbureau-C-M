@@ -1,0 +1,77 @@
+body{
+    background-color: #F0EFE8;
+}
+
+.selection-overview-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.img-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #6c3baa;
+    color: white;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    border-radius: 2.4px;
+    padding: 20px;
+    align-self: flex-end;
+    
+}
+.icon-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.info-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    background-color: #F0EFE8;
+}
+
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    margin: 10px;
+}
+
+#luchthaven-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.filter-header {
+    padding-left: 10px;
+    background-color: #6c3baa;
+    color: white;
+    border-radius: 2.4px;
+}

@@ -65,6 +65,21 @@
                 <input class="input-box" placeholder="Hoeveel personen?" type="number" name="personen">
             </div>
             <input class="searchbutton" type="submit" value="Zoeken">
+<body>
+    <header>
+        
+        
+    </header>
+    <main>
+        <form action="" method="get">
+            <select>
+                <option value="Vliegreis">Vliegreis</option>
+                <option value="Treinreis">Treinreis</option>
+                <option value="Autoreis">Autoreis</option>
+            </select>
+
+            <input placeholder="Hoeveel personen?" type="number" name="personen">
+            <input type="submit" value="Zoek">
         </form>
     </main>
 

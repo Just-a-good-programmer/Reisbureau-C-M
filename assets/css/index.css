@@ -6,59 +6,11 @@ body{
 .flexbox-setting{
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
     height: auto;
     width: 100%;
-}
-.selection-overview-item {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-}
 
-.img-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 60%;
-}
-
-.info-box {
-    display: flex;
-    flex-direction: column;
-    background-color: #6c3baa;
-    color: white;
-    justify-content: center;
-    width: 40%;
-    height: 50%;
-    border-radius: 2.4px;
-    padding: 20px;
-    align-self: flex-end;
-    
-}
-.icon-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    
-}
-
-.info-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 500px;
-    background-color: #F0EFE8;
-}
-
-.main-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
 }
 
 .searchbox{
@@ -174,6 +126,7 @@ body{
 #menuToggle input
 {
     display: block;
+    justify-content: space-around;
     width: 40px;
     height: 50px;
     cursor: pointer;
@@ -203,32 +156,13 @@ body{
     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
     opacity 0.55s ease;
 }
-
-header {
-    background-color: #6C3BAA;
-    color: white;
-    height: 60px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-
 #menuToggle input:checked ~ span
 {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #FFFFFF;
+
 }
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu
 {
     position: absolute;
@@ -254,44 +188,5 @@ header {
 {
     padding: 10px 0;
     font-size: 22px;
-}
 
-.footer{
-    display: flex;
-    justify-self: center;
-    justify-content: center;
-    gap: 60px;
-    border: #6C3BAA solid 2px;
-    width: 40%;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #f0efe8;
-}
-
-#filter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 25%;
-    margin: 10px;
-}
-
-#luchthaven-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-}
-
-.filter-header {
-    padding-left: 10px;
-    background-color: #6c3baa;
-    color: white;
-    border-radius: 2.4px;
 }
