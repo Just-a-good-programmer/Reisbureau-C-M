@@ -1,0 +1,92 @@
+.site-info {
+    flex-direction: column;
+    margin-bottom: 40px;
+    line-height: 20px;
+    border: #6C3BAA solid 2px;
+    width: 57%;
+    font-size: 20px;
+    padding: 5px;
+    justify-self: center;
+}
+.naam {
+    width: 400px;
+    margin-bottom: -25px;
+}
+.opsomming{
+    display: flex;
+    flex-direction: column;
+    line-height: 0px;
+    margin-top: -15px;
+}
+.footer{
+    background-color: #6C3BAA;
+    margin-top: 50px;
+    border: #6C3BAA solid 2px;
+    height: 210px;
+    padding: 10px;
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 10px;
+    justify-self: center;
+    justify-content: center;
+}
+.vakje{
+    width: 200px;
+    height: 35px;
+    background-color: #6C3BAA;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.contact {
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+.afspraak{
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+.klacht{
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+.vraag{
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}

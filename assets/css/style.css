@@ -165,21 +165,6 @@ header {
     margin-bottom: 40px;
 }
 
-.naam {
-    width: 400px;
-    margin-bottom: -25px;
-}
-
-.site-info {
-    flex-direction: column;
-    margin-bottom: 40px;
-    line-height: 20px;
-    border: #6C3BAA solid 2px;
-    width: 57%;
-    font-size: 20px;
-    padding: 5px;
-    justify-self: center;
-}
 /*
  * Transform all the slices of hamburger
  * into a crossmark.
@@ -190,91 +175,6 @@ header {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #FFFFFF;
-}
-
-.opsomming{
-    display: flex;
-    flex-direction: column;
-    line-height: 0px;
-    margin-top: -15px;
-}
-
-.contact {
-    border: #6c3baa solid 1px;
-    padding: 10px;
-    line-height: 7px;
-    flex-direction: column;
-    display: flex;
-    justify-self: flex-start;
-    margin-top: -5px;
-    width: 380px;
-    border-radius: 10px;
-    background-color: #F0EFE8;
-}
-
-.afspraak{
-    border: #6c3baa solid 1px;
-    padding: 10px;
-    line-height: 7px;
-    flex-direction: column;
-    display: flex;
-    justify-self: flex-start;
-    margin-top: -5px;
-    width: 380px;
-    border-radius: 10px;
-    background-color: #F0EFE8;
-}
-
-.klacht{
-    border: #6c3baa solid 1px;
-    padding: 10px;
-    line-height: 7px;
-    flex-direction: column;
-    display: flex;
-    justify-self: flex-start;
-    margin-top: -5px;
-    width: 380px;
-    border-radius: 10px;
-    background-color: #F0EFE8;
-}
-
-.vraag{
-    border: #6c3baa solid 1px;
-    padding: 10px;
-    line-height: 7px;
-    flex-direction: column;
-    display: flex;
-    justify-self: flex-start;
-    margin-top: -5px;
-    width: 380px;
-    border-radius: 10px;
-    background-color: #F0EFE8;
-}
-
-.footer{
-    background-color: #6C3BAA;
-    margin-top: 50px;
-    border: #6C3BAA solid 2px;
-    height: 210px;
-    padding: 10px;
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    border-radius: 10px;
-    justify-self: center;
-    justify-content: center;
-}
-
-.vakje{
-    width: 200px;
-    height: 35px;
-    background-color: #6C3BAA;
-    color: white;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
 }
 /*
  * Make this absolute positioned
@@ -345,53 +245,4 @@ form {
     background-color: #6c3baa;
     color: white;
     border-radius: 2.4px;
-}
-
-
-.mail{
-    width: 550px;
-    height: 30px;
-}
-
-.beschrijving{
-    width: 550px;
-    height: 100px;
-}
-
-.send{
-    width: 90px;
-    height: 35px;
-    background-color: #6c3baa;
-    color: white;
-}
-.telefoonnummer{
-    border: #6c3baa solid 1px;
-    padding: 10px;
-    line-height: 7px;
-    flex-direction: row-reverse;
-    display: flex;
-    justify-self: flex-start;
-    margin-top: -5px;
-    width: 380px;
-}
-
-.nummer{
-    width: 150px;
-    height: 30px;
-    font-size:16px;
-    margin-top: 10px;
-}
-
-.informatie-bellen{
-    line-height: 10px;
-}
-
-.contact-footer{
-    margin-top: 50px;
-    border: #6C3BAA solid 2px;
-    height: 200px;
-    padding: 10px;
-    align-content: center;
-    display: flex;
-    flex-direction: column;
 }
