@@ -36,11 +36,11 @@ if (isset($_POST['opslaan'])) {
 <h1>Flight bewerken</h1>
 
 <form method="post">
-
+    FlightNumber:
     <input type="text" name="Type" placeholder="FlightNumber" value="<?= $Flights['FlightNumber'] ?>"><p>
-
+    Transfers:
     <input type="number" name="Stars" placeholder="Transfers" value="<?= $Flights['Transfers'] ?>"><p>
-
+    Duration:
     <input type="text" name="Lodging" placeholder="Duration" value="<?= $Flights['Duration'] ?>"><p>
 
     <button type="submit" name="opslaan">Opslaan</button>

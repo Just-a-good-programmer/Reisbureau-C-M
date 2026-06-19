@@ -39,21 +39,23 @@ if (isset($_POST['opslaan'])) {
 
 <h1>Accomodation bewerken</h1>
 
-<form method="post">
+<div class="edit">
+    <form method="post">
+     Type:
+      <input type="text" name="Type" placeholder="Type" value="<?= $Accomodations['Type'] ?>"><p>
+     Stars:
+     <input type="number" name="Stars" placeholder="Stars" value="<?= $Accomodations['Stars'] ?>"><p>
+     Lodging:
+     <input type="text" name="Lodging" placeholder="Lodging" value="<?= $Accomodations['Lodging'] ?>"><p>
+     RentalCar:
+     <input type="text" name="RentalCar" placeholder="RentalCar" value="<?= $Accomodations['RentalCar'] ?>"><p>
+     Persons:
+     <input type="number" name="Persons" placeholder="Persons" value="<?= $Accomodations['Persons'] ?>"><p>
 
-    <input type="text" name="Type" placeholder="Type" value="<?= $Accomodations['Type'] ?>"><p>
+      <button type="submit" name="opslaan">Opslaan</button>
 
-    <input type="number" name="Stars" placeholder="Stars" value="<?= $Accomodations['Stars'] ?>"><p>
-
-    <input type="text" name="Lodging" placeholder="Lodging" value="<?= $Accomodations['Lodging'] ?>"><p>
-
-    <input type="text" name="RentalCar" placeholder="RentalCar" value="<?= $Accomodations['RentalCar'] ?>"><p>
-
-    <input type="number" name="Persons" placeholder="Persons" value="<?= $Accomodations['Persons'] ?>"><p>
-
-    <button type="submit" name="opslaan">Opslaan</button>
-
-</form>
+    </form>
+</div>
 
 </body>
 </html>
