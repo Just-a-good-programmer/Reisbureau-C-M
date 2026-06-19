@@ -1,0 +1,107 @@
+body{
+    background-color: #F0EFE8;
+}
+
+.add-page{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+header {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.terug-btn{
+    width: 30px;
+    font-size: 30px;
+    color: white;
+    margin-left: 6px;
+    text-decoration: none;
+}
+
+.accomodation{
+    display: flex;
+    flex-direction: column;
+    border: #6c3baa solid 1px;
+    justify-items: center;
+    align-items: center;
+}
+
+.flight{
+    display: flex;
+    flex-direction: column;
+    border: #6c3baa solid 1px;
+    justify-items: center;
+    align-items: center;
+}
+
+.trip{
+    display: flex;
+    flex-direction: column;
+    border: #6c3baa solid 1px;
+    justify-items: center;
+    align-items: center;
+}
+
+.opslaan-btn{
+    width: 50%;
+    height: 30px;
+    background-color: #6c3baa;
+    color: white;
+}
+
+.add-btn{
+    text-decoration: none;
+    background-color: #6c3baa;
+    color: white;
+    border-radius: 10px;
+    width: 160px;
+    height: 30px;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
+}
+
+.delete-btn{
+    text-decoration: none;
+    background-color: #6c3baa;
+    color: white;
+    width: 80px;
+}
+
+.edit-btn{
+    text-decoration: none;
+    background-color: #6c3baa;
+    color: white;
+}
+
+.all-accomodations{
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+    border: #6c3baa solid 1px;
+    flex-direction: row;
+}
+
+.all-flights{
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+    border: #6c3baa solid 1px;
+    flex-direction: row;
+}
+
+.all-trips{
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+    border: #6c3baa solid 1px;
+    flex-direction: row;
+}

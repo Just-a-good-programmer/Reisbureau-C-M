@@ -1,0 +1,58 @@
+.contact {
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: column;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+    border-radius: 10px;
+    background-color: #F0EFE8;
+}
+.mail{
+    width: 550px;
+    height: 30px;
+}
+
+.beschrijving{
+    width: 550px;
+    height: 100px;
+}
+
+.send{
+    width: 90px;
+    height: 35px;
+    background-color: #6c3baa;
+    color: white;
+}
+.contact-footer{
+    margin-top: 50px;
+    border: #6C3BAA solid 2px;
+    height: 200px;
+    padding: 10px;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.telefoonnummer{
+    border: #6c3baa solid 1px;
+    padding: 10px;
+    line-height: 7px;
+    flex-direction: row-reverse;
+    display: flex;
+    justify-self: flex-start;
+    margin-top: -5px;
+    width: 380px;
+}
+
+.nummer{
+    width: 150px;
+    height: 30px;
+    font-size:16px;
+    margin-top: 10px;
+}
+
+.informatie-bellen{
+    line-height: 10px;
+}

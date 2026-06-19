@@ -214,21 +214,6 @@ header {
     margin-bottom: 40px;
 }
 
-.naam {
-    width: 400px;
-    margin-bottom: -25px;
-}
-
-.site-info {
-    flex-direction: column;
-    margin-bottom: 40px;
-    line-height: 20px;
-    border: #6C3BAA solid 2px;
-    width: 57%;
-    font-size: 20px;
-    padding: 5px;
-    justify-self: center;
-}
 /*
  * Transform all the slices of hamburger
  * into a crossmark.
@@ -239,34 +224,6 @@ header {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
     background: #FFFFFF;
-}
-
-.opsomming{
-    display: flex;
-    flex-direction: column;
-    line-height: 0px;
-    margin-top: -15px;
-}
-
-.berichten{
-    display: flex;
-    flex-direction: column;
-    line-height: 5px;
-}
-
-.vraag{
-    margin-top: 52px;
-}
-
-.vakje{
-    width: 200px;
-    height: 35px;
-    background-color: #6C3BAA;
-    color: white;
-    border-radius: 10px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
 }
 /*
  * Make this absolute positioned

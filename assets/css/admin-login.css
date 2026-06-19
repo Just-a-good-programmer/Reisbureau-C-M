@@ -1,0 +1,12 @@
+.admin-login-box{
+    align-self: center;
+    display: flex;
+    justify-self: center;
+    border: #6c3baa solid 1px;
+    width: 40%;
+    height: 200px;
+}
+.admin-input{
+    width: 50%;
+    height: 30px;
+}
