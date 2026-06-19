@@ -46,7 +46,7 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
         Persons: <?= $a['Persons'] ?><br>
     </div>
 
-    <a class="edit-btn" href="edit.php?id=<?= $a['AccomodationID'] ?>">🛠️ Bewerken</a>
+    <a class="edit-btn" href="edit-accomodation.php?id=<?= $a['AccomodationID'] ?>">🛠️ Bewerken</a>
     <a class="delete-btn" href="delete.php?delete=<?= $a['AccomodationID'] ?>">🗑️ Delete</a>
 
 <?php endforeach; ?>
@@ -64,7 +64,7 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
     Duur: <?= $f['Duration'] ?> uur<br>
     </div>
 
-   <a class="edit-btn" href="edit.php?id=<?= $f['FlightID'] ?>">🛠️ Bewerken</a>
+   <a class="edit-btn" href="edit-flight.php?id=<?= $f['FlightID'] ?>">🛠️ Bewerken</a>
    <a class="delete-btn" href="delete.php?id=<?= $f['FlightID'] ?>">🗑️ Delete</a>
 
 <?php endforeach; ?>
@@ -84,7 +84,7 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
         Price: <?= $t['Price'] ?><br>
     </div>
 
-    <a class="edit-btn" href="edit.php?id=<?= $t['TripID'] ?>">🛠️ Bewerken</a>
+    <a class="edit-btn" href="edit-trip.php?id=<?= $t['TripID'] ?>">🛠️ Bewerken</a>
     <a class="delete-btn" href="delete.php?id=<?= $t['TripID'] ?>">🗑️ Delete</a>
 
 <?php endforeach; ?>
