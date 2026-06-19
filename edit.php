@@ -1,56 +1,55 @@
 <?php
 require_once './crud/dbcall.php';
 
-if (isset($_POST['FlightNumber'])) {
+$id = $_GET['id'];
 
-    $sql =  $conn->prepare("
-        UPDATE Flights
-        SET FlightNumber = :FlightNumber,
-            Transfers = :Transfers,
-            Duration = :Duration
-        WHERE FlightID = :id
+$sql = $conn->prepare("SELECT * FROM Accomodations WHERE AccomodationID = :id");
+$sql->execute(['id' => $id]);
+$Accomodations = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+if (isset($_POST['opslaan'])) {
+
+    $update = $conn->prepare("
+        UPDATE Accomodations
+        SET Type = :Type,
+            Stars = :Stars,
+            Lodging = :Lodging,
+            RentalCar = :RentalCar,
+            Persons = :Persons
+        WHERE AccomodationID = :id
     ");
 
-    $sql->execute([
-        'FlightID'     => $_POST['FlightID'],
-        'FlightNumber' => $_POST['FlightNumber'],
-        'Transfers'    => $_POST['Transfers'],
-        'Duration'     => $_POST['Duration']
+    $update->execute([
+            'Type'      => $_POST['Type'],
+            'Stars'     => $_POST['Stars'],
+            'Lodging'   => $_POST['Lodging'],
+            'RentalCar' => $_POST['RentalCar'],
+            'Persons'   => $_POST['Persons'],
+            'id'        => $id
     ]);
 
     header("Location: admin.php");
     exit;
 }
-
-// -----------------------------
-// 2. Huidige vlucht ophalen
-// -----------------------------
-$sql = $conn->prepare("SELECT * FROM Flights WHERE FlightID = :id");
-$sql->execute(['id' => $_GET['id']]);
-$flight = $sql->fetch();
 ?>
+
 <!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <title>Vlucht bewerken</title>
-</head>
+<html>
 <body>
 
-<h1>Vlucht bewerken</h1>
+<h1>Accomodation bewerken</h1>
 
 <form method="post">
 
-    <input type="hidden" name="id" value="<?php echo $flight['FlightID']; ?>">
+    <input type="text" name="Type" placeholder="Type" value="<?= $Accomodations['Type'] ?>"><p>
 
-    <label>Vlucht Nummer</label>
-    <input type="number" name="FlightNumber" value="<?php echo $flight['FlightNumber']; ?>">
+    <input type="number" name="Stars" placeholder="Stars" value="<?= $Accomodations['Stars'] ?>"><p>
 
-    <label>Transfers</label>
-    <input type="number" name="Transfers" value="<?php echo $flight['Transfers']; ?>">
+    <input type="text" name="Lodging" placeholder="Lodging" value="<?= $Accomodations['Lodging'] ?>"><p>
 
-    <label>Duur (uren)</label>
-    <input type="number" name="Duration" value="<?php echo $flight['Duration']; ?>">
+    <input type="text" name="RentalCar" placeholder="RentalCar" value="<?= $Accomodations['RentalCar'] ?>"><p>
+
+    <input type="number" name="Persons" placeholder="Persons" value="<?= $Accomodations['Persons'] ?>"><p>
 
     <button type="submit" name="opslaan">Opslaan</button>
 
@@ -58,3 +57,61 @@ $flight = $sql->fetch();
 
 </body>
 </html>
+<?php
+require_once './crud/dbcall.php';
+
+$id = $_GET['id'];
+
+$sql = $conn->prepare("SELECT * FROM Flights WHERE FlightID = :id");
+$sql->execute(['id' => $id]);
+$Flights = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+if (isset($_POST['opslaan'])) {
+
+    $update = $conn->prepare("
+        UPDATE Flights
+        SET FlightNumber	 = :FlightNumber	,
+            Transfers = :Transfers,
+            Duration = :Duration
+        WHERE FlightID = :id
+    ");
+
+    $update->execute([
+            'Type'      => $_POST['Type'],
+            'Stars'     => $_POST['Stars'],
+            'Lodging'   => $_POST['Lodging'],
+            'RentalCar' => $_POST['RentalCar'],
+            'Persons'   => $_POST['Persons'],
+            'id'        => $id
+    ]);
+
+    header("Location: admin.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Accomodation bewerken</h1>
+
+<form method="post">
+
+    <input type="text" name="Type" placeholder="Type" value="<?= $Accomodations['Type'] ?>"><p>
+
+    <input type="number" name="Stars" placeholder="Stars" value="<?= $Accomodations['Stars'] ?>"><p>
+
+    <input type="text" name="Lodging" placeholder="Lodging" value="<?= $Accomodations['Lodging'] ?>"><p>
+
+    <input type="text" name="RentalCar" placeholder="RentalCar" value="<?= $Accomodations['RentalCar'] ?>"><p>
+
+    <input type="number" name="Persons" placeholder="Persons" value="<?= $Accomodations['Persons'] ?>"><p>
+
+    <button type="submit" name="opslaan">Opslaan</button>
+
+</form>
+
+</body>
+</html>
+

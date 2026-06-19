@@ -58,13 +58,50 @@ header {
 }
 
 .add-btn{
-    
+    text-decoration: none;
+    background-color: #6c3baa;
+    color: white;
+    border-radius: 10px;
+    width: 160px;
+    height: 30px;
+    display: inline-block;
+    justify-content: center;
+    align-content: center;
 }
 
 .delete-btn{
-
+    text-decoration: none;
+    background-color: #6c3baa;
+    color: white;
+    width: 80px;
 }
 
 .edit-btn{
+    text-decoration: none;
+    background-color: #6c3baa;
+    color: white;
+}
 
+.all-accomodations{
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+    border: #6c3baa solid 1px;
+    flex-direction: row;
+}
+
+.all-flights{
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+    border: #6c3baa solid 1px;
+    flex-direction: row;
+}
+
+.all-trips{
+    display: flex;
+    margin-top: 20px;
+    width: 50%;
+    border: #6c3baa solid 1px;
+    flex-direction: row;
 }
