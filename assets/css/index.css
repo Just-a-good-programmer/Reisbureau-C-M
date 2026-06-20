@@ -93,156 +93,65 @@ body{
     font-family: Liber;
     src: url(LiberRegular.otf);
 }
+.titel-panel{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-family: Liber;
+    font-style: normal;
+    width: 100%;
+    height: 80px;
+    font-size: 20px;
+    color: #ffffff;
+    img{
+        width: 50px;
+        height: 50px;
+    }}
 
-#menuToggle
-{
-  display: block;
-  /* You can also use relative/absolute here if you want to stay on the top */
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  
-  z-index: 1;
-  
-  -webkit-user-select: none;
-  user-select: none;
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #6c3baa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
-#menuToggle a
-{
-  text-decoration: none;
-  color: #FFFFFF;
-  
-  transition: color 0.3s ease;
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.3s;
 }
 
-#menuToggle a:hover
-{
-  color: tomato;
+.sidepanel a:hover {
+    color: #f1f1f1;
 }
 
-
-#menuToggle input
-{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  
-  cursor: pointer;
-  
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  
-  -webkit-touch-callout: none;
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
 }
 
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 40px;
-  height: 2px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #6C3BAA;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+.openbtn {
+    font-size: 50px;
+    cursor: pointer;
+    color: #6c3baa;
+    padding: 10px 15px;
+    border: none;
 }
 
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: white;
-}
-
-/*
- * But let's hide the middle one.
- */
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#menu
-{
-  position: absolute;
-  max-width: 400px;
-  width: 100vw;
-  height: 900px;
-  margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
-  box-sizing: border-box;
-  overflow-y: auto;
-  background: #6C3BAA;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 10px 0;
-  font-size: 22px;
-}
-
-#menu li label
-{
-  cursor: pointer;
-}
-
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul
-{
-  transform: none;
+.openbtn:hover {
+    color: #ff6b00;
 }
 
 .img-box{
