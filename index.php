@@ -1,3 +1,11 @@
+<?php
+$conn = new PDO('mysql:host=db;dbname=carmitchreizen', 'user', 'password');
+$sql = $conn->prepare("SELECT * FROM Trip");
+$sql->execute();
+$result = $sql->fetchAll();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,86 +13,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoofdpagina</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <script src="functions/js/index.js"></script>
+
+
 </head>
-<body class="flexbox-setting">
+<body>
 <header>
+
+    <div id="mySidepanel" class="sidepanel">
+        <div class="titel-panel">
+            <img src="assets/img/tropical_palm_2.png" alt="Logo">
+            <h1>Carmitch Reizen</h1>
+        </div>
+
+        <form method="get" class="form-main" action="">
+            <div class="form-box">
+                <label for="search">Zoek</label><input class="form-text" type="text" id="search" name="search"
+                                                       placeholder="search..">
+            </div>
+            <input class="form-button" name="submit" type="submit" value="Submit">
+        </form>
+        <?php
+        if (isset($_GET['submit'])) {
+            $sql = $conn->prepare("SELECT * FROM Trip WHERE Location LIKE :search OR Transport LIKE :search");
+            $sql->bindValue(':search', '%' . $_GET['search'] . '%');
+            $sql->execute();
+            $result = $sql->fetchAll();
+        } else {
+            $sql = $conn->prepare("SELECT * FROM Trip");
+            $sql->execute();
+            $result = $sql->fetchAll();
+        }
+
+        ?>
+
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="functions/over-ons.php">Over Ons</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <button class="openbtn" onclick="openNav()">☰</button>
+
+
     <div class="titel">
         <img src="assets/img/tropical_palm_2.png" alt="Logo">
         <hi>Carmitch Reizen</hi>
     </div>
-    <nav role="navigation">
-        <div id="menuToggle">
-            <!--
-            A fake / hidden checkbox is used as click reciever,
-            so you can use the :checked selector on it.
-            -->
-            <input type="checkbox" id="menuCheckbox"/>
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-            <ul id="menu">
-                <li>
-                    <a href="#">
-                        <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
-                    </a>
-                </li>
-
-                <!-- These just close the menu -->
-                <li><label for="menuCheckbox"><a>Info</a></label></li>
-                <li><label for="menuCheckbox"><a>Contact</a></label></li>
-
-                <!-- Or just use regular URLs -->
-                <li>
-                    <a href="https://erikterwan.com/" target="_blank">Show me more</a>
-                </li>
-            </ul>
-        </div>
-    </nav><!--    Made by Erik Terwan    -->
-    <!--   24th of November 2015   -->
-    <!--        MIT License        -->
-    <nav role="navigation">
-        <div id="menuToggle">
-            <!--
-            A fake / hidden checkbox is used as click reciever,
-            so you can use the :checked selector on it.
-            -->
-            <input type="checkbox" id="menuCheckbox"/>
-
-            <span></span>
-            <span></span>
-            <span></span>
-
-
-            <ul id="menu">
-                <li>
-                    <a href="#">
-                        <label for="menuCheckbox" onclick="this.parentNode.click();">Home</label>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about">
-                        <label for="menuCheckbox" onclick="this.parentNode.click();">About</label>
-                    </a>
-                </li>
-
-                <!-- These just close the menu -->
-                <li><label for="menuCheckbox"><a>Info</a></label></li>
-                <li><label for="menuCheckbox"><a>Contact</a></label></li>
-
-                <!-- Or just use regular URLs -->
-                <li>
-                    <a href="overzicht.php" target="_blank">Overzicht Pagina</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
 
 </header>
 <main class="flexbox-setting">
@@ -136,6 +112,18 @@
         </div>
     </div>
     </div>
+
+    <? foreach ($result as $tripItem) { ?>
+        <h3> <?php
+            echo $tripItem['Location'];
+            ?>
+        </h3>
+        <h3> <?php
+            echo $tripItem['Transport'];
+            ?>
+        </h3>
+    <? } ?>
+
 </main>
 
 
