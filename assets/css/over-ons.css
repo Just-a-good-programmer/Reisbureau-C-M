@@ -8,6 +8,12 @@ headers {
     margin-bottom: 40px;
 }
 
+.terug-btn{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
 .site-info {
     flex-direction: column;
     margin-bottom: 40px;
