@@ -21,7 +21,7 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin – Vluchten</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="assets/css/admin.css">
 
 </head>
@@ -32,10 +32,11 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
     <h1>Admin </h1>
 </header>
 
+
     <h2>Beheer Accomodations</h2>
     <a class="add-btn" href="add.php">✈️ Add Accomodations</a>
 
-<?php foreach ($Accomodations as $a): ?>
+    <?php foreach ($Accomodations as $a): ?>
 
     <div class="all-accomodations">
         Accomodation ID: <?= $a['AccomodationID'] ?><br>
@@ -47,15 +48,15 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <a class="edit-btn" href="edit-accomodation.php?id=<?= $a['AccomodationID'] ?>">🛠️ Bewerken</a>
-    <a class="delete-btn" href="delete.php?delete=<?= $a['AccomodationID'] ?>">🗑️ Delete</a>
+    <a class="delete-btn" href="delete.php?id=<?= $a['AccomodationID'] ?>">🗑️ Delete</a>
 
-<?php endforeach; ?>
+    <?php endforeach; ?>
 
 
     <h2>Beheer Vluchten</h2>
     <a class="add-btn" href="add.php">✈️ Add Flight</a>
 
-<?php foreach ($flights as $f): ?>
+    <?php foreach ($flights as $f): ?>
 
     <div class="all-flights">
     Vlucht ID: <?= $f['FlightID'] ?><br>
@@ -67,12 +68,12 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
    <a class="edit-btn" href="edit-flight.php?id=<?= $f['FlightID'] ?>">🛠️ Bewerken</a>
    <a class="delete-btn" href="delete.php?id=<?= $f['FlightID'] ?>">🗑️ Delete</a>
 
-<?php endforeach; ?>
+    <?php endforeach; ?>
 
     <h2>Beheer Trip</h2>
     <a class="add-btn" href="add.php">✈️ Add Trips</a>
 
-<?php foreach ($Trip as $t): ?>
+    <?php foreach ($Trip as $t): ?>
 
     <div class="all-trips">
         Trip ID: <?= $t['TripID'] ?><br>
