@@ -39,7 +39,9 @@ if (isset($_POST['opslaan'])) {
 <html>
 <body>
 
+<headers>
 <h1>Trip bewerken</h1>
+</headers>
 
 <form method="post">
     Location:
