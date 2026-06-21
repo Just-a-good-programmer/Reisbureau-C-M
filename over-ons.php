@@ -9,6 +9,7 @@
 </head>
 
 <headers>
+    <a href="index.php" class="terug-btn"><</a>
     <h1>Over ons</h1>
 </headers>
 

@@ -9,6 +9,7 @@
 </head>
 
 <headers>
+    <a href="index.php" class="terug-btn"><</a>
     <h1>Contact</h1>
 </headers>
 
