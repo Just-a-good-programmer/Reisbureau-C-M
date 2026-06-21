@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/admin.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
 </head>
 
 <headers>
-    <a href="index.php" class="terug-btn"><</a>
+    <a href="over-ons.php" class="terug-btn"><</a>
     <h1>Contact</h1>
 </headers>
 
@@ -23,7 +23,7 @@
     <input class="beschrijving" type="text" placeholder="Beschrijving">
     Telefoonnummer(optioneel)
     <input class="mail" type="number" placeholder="Telefoonnummer">
-    <button class="send">Verzenden</button>
+    <button class="send" href="index.php">Verzenden</button>
 </div>
 
 <div class="contact-footer">
