@@ -74,7 +74,7 @@ $User = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
     <h1 class="titel" id="accomodations" >Beheer Accomodations</h1>
-    <a class="add-btn" href="add-accomodation.php">Add Accomodations</a>
+    <a class="add-btn" href="add-accomodation.php">Add Accomodation</a>
 
     <?php foreach ($Accomodations as $a): ?>
 
@@ -115,7 +115,7 @@ $User = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
     <h1 class="titel" id="trips">Beheer Trips</h1>
-    <a class="add-btn" href="add-trip.php">Add Trips</a>
+    <a class="add-btn" href="add-trip.php">Add Trip</a>
 
     <?php foreach ($Trip as $t): ?>
 
@@ -137,7 +137,7 @@ $User = $sql->fetchAll(PDO::FETCH_ASSOC);
 
 
     <h1 class="titel" id="Users">Beheer Users</h1>
-    <a class="add-btn" href="add-user.php">Add Trips</a>
+    <a class="add-btn" href="add-user.php">Add User</a>
 
      <?php foreach ($User as $u): ?>
 
