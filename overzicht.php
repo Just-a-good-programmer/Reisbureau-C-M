@@ -37,23 +37,23 @@ require_once 'crud/read/read.php';
                     <h2>Aantal sterren</h2>
                 </div>
                 <div class="star-filter-item">
-                <input type="checkbox" id="1-ster" name="aantal-sterren-keuze" value="1">
+                <input type="checkbox" id="1-ster" name="aantal-sterren-keuze" value=1>
                 <label for="1-ster">1 ster</label>
                 </div>
                 <div class="star-filter-item">
-                <input type="checkbox" id="2-sterren" name="aantal-sterren-keuze" value="2">
+                <input type="checkbox" id="2-sterren" name="aantal-sterren-keuze" value=2>
                 <label for="2-sterren">2 sterren</label>
                 </div>
                 <div class="star-filter-item">
-                <input type="checkbox" id="3-sterren" name="aantal-sterren-keuze" value="3">
+                <input type="checkbox" id="3-sterren" name="aantal-sterren-keuze" value=3>
                 <label for="3-sterren">3 sterren</label>
                 </div>
                 <div class="star-filter-item">
-                <input type="checkbox" id="4-sterren" name="aantal-sterren-keuze" value="4">
+                <input type="checkbox" id="4-sterren" name="aantal-sterren-keuze" value=4>
                 <label for="4-sterren">4 sterren</label>
                 </div>
                 <div class="star-filter-item">
-                <input type="checkbox" id="5-sterren" name="aantal-sterren-keuze" value="5">
+                <input type="checkbox" id="5-sterren" name="aantal-sterren-keuze" value=5>
                 <label for="5-sterren">5 sterren</label>
                 </div>
 
@@ -62,24 +62,24 @@ require_once 'crud/read/read.php';
                     <h2>Beoordeling</h2>
                 </div>
                 <div class="review-filter-group">
-                <input type="checkbox" class="review-filter-item" id="9-of-hoger" name="beoordeling-keuze" value="9">
-                <label for="9-of-hoger">9 of hoger</label>
+                <input type="radio" class="review-filter-item" id="9" name="beoordeling-keuze" value="9">
+                <label for="9 of hoger">9 of hoger</label>
                 </div>
                 <div class="review-filter-group">
-                <input type="checkbox" class="review-filter-item" id="8-of-hoger" name="beoordeling-keuze" value="8">
-                <label for="8-of-hoger">8 of hoger</label>
+                <input type="radio" class="review-filter-item" id="8" name="beoordeling-keuze" value="8">
+                <label for="8 of hoger">8 of hoger</label>
                 </div>
                 <div class="review-filter-group">
-                <input type="checkbox" class="review-filter-item" id="7-of-hoger" name="beoordeling-keuze" value="7">
-                <label for="7-of-hoger">7 of hoger</label>
+                <input type="radio" class="review-filter-item" id="7" name="beoordeling-keuze" value="7">
+                <label for="7 of hoger">7 of hoger</label>
                 </div>
                 <div class="review-filter-group">
-                <input type="checkbox" class="review-filter-item" id="6-of-hoger" name="beoordeling-keuze" value="6">
-                <label for="6-of-hoger">6 of hoger</label>
+                <input type="radio" class="review-filter-item" id="6" name="beoordeling-keuze" value="6">
+                <label for="6 of hoger">6 of hoger</label>
                 </div>
                 <div class="review-filter-group">
-                <input type="checkbox" class="review-filter-item" id="5-of-hoger" name="beoordeling-keuze" value="5">
-                <label for="5-of-hoger">5 of hoger</label>
+                <input type="radio" class="review-filter-item" id="5" name="beoordeling-keuze" value="5">
+                <label for="5 of hoger">5 of hoger</label>
                 </div>
 
 
