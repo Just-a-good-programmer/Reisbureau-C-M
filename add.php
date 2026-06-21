@@ -3,32 +3,17 @@ require_once './crud/dbcall.php';
 
 if (isset($_POST['opslaan'])) {
 
-    $sql = $conn->prepare("
-        INSERT INTO Accomodations (Type, Stars, Lodging, RentalCar, Persons)
-        VALUES (:Type, :Stars, :Lodging, :RentalCar, :Persons)
-    ");
-    $sql->execute([
-            'Type'    => $_POST['Type'],
-            'Stars'     => $_POST['Stars'],
-            'Lodging'     => $_POST['Lodging'],
-            'RentalCar'     => $_POST['RentalCar'],
-            'Persons'     => $_POST['Persons']
-    ]);
-    header("Location: admin.php");
-        exit;
+$sql = $conn->prepare("INSERT INTO Accomodations (Type, Stars, Lodging, RentalCar, Persons) VALUES (:Type, :Stars, :Lodging, :RentalCar, :Persons)");
 
-     $sql = $conn->prepare("
-                INSERT INTO Flights (FlightNumber, Transfers, Duration)
-                VALUES (:FlightNumber, :Transfers, :Duration)
-            ");
-    $sql->execute([
-                'FlightNumber'    => $_POST['FlightNumber'],
-                'Transfers'     => $_POST['Transfers'],
-                'Duration'     => $_POST['Duration']
-        ]);
+$sql->bindparam(':Type', $_POST['Type']);
+$sql->bindparam(':Stars', $_POST['Stars']);
+$sql->bindparam(':Lodging', $_POST['Lodging']);
+$sql->bindparam(':RentalCar', $_POST['RentalCar']);
+$sql->bindparam(':Persons', $_POST['Persons']);
 
-    header("Location: admin.php");
-    exit;
+$sql->execute();
+
+echo "Accomodation toegevoegd";
 }
 ?>
 
