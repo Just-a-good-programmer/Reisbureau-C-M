@@ -1,8 +1,5 @@
 <?php
-$conn = new PDO('mysql:host=db;dbname=carmitchreizen', 'user', 'password');
-$sql = $conn->prepare("SELECT * FROM Trip");
-$sql->execute();
-$result = $sql->fetchAll();
+require_once 'crud/read/read.php';
 ?>
 
 
@@ -13,7 +10,6 @@ $result = $sql->fetchAll();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoofdpagina</title>
     <link rel="stylesheet" href="assets/css/index.css">
-    <script src="functions/js/index.js"></script>
 
 
 </head>
@@ -48,10 +44,10 @@ $result = $sql->fetchAll();
         ?>
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="functions/over-ons.php">Over Ons</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="over-ons.php">Over Ons</a>
+        <a href="overzicht.php">Overzicht</a>
+        <a href=admin-login.php"">Login</a>
+        <a href="contact.php">Contact</a>
     </div>
 
     <button class="openbtn" onclick="openNav()">☰</button>
@@ -112,17 +108,16 @@ $result = $sql->fetchAll();
         </div>
     </div>
     </div>
-
-    <? foreach ($result as $tripItem) { ?>
-        <h3> <?php
-            echo $tripItem['Location'];
-            ?>
-        </h3>
-        <h3> <?php
-            echo $tripItem['Transport'];
-            ?>
-        </h3>
-    <? } ?>
+    <div class="flexbox-setting">
+        <? foreach ($result as $tripItem) { ?>
+            <nav class="searchbutton flexbox-setting">
+                <a href="overzicht.php"><?php echo $tripItem['Location']; ?></a>
+            </nav>
+            <nav class="searchbutton flexbox-setting">
+                <a href="overzicht.php"><?php echo $tripItem['Transport']; ?></a>
+            </nav>
+        <? } ?>
+    </div>
 
 </main>
 
@@ -131,4 +126,7 @@ $result = $sql->fetchAll();
 
 </footer>
 </body>
+
+<script src="functions/js/index.js"></script>
+
 </html>
