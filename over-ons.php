@@ -70,7 +70,7 @@
         </div>
 
         <div class="vraag">
-            <h2>Vraag stellen</h2>
+            <a class="vraag" href="vraag.php">Vraag stellen</a>
             <p class="vakje">stel een vraag</p>
         </div>
 

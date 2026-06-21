@@ -1,12 +1,31 @@
+headers {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+body{
+    background-color: #F0EFE8;
+}
+
+.terug-btn{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
 .contact {
     border: #6c3baa solid 1px;
     padding: 10px;
-    line-height: 7px;
     flex-direction: column;
     display: flex;
-    justify-self: flex-start;
+    justify-self: center;
     margin-top: -5px;
-    width: 380px;
+    width: 550px;
     border-radius: 10px;
     background-color: #F0EFE8;
 }

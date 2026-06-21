@@ -1,0 +1,56 @@
+headers {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+body{
+    background-color: #F0EFE8;
+}
+
+.terug-btn{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.vraag{
+    text-decoration: none;
+    font-size: 30px;
+    color: black;
+    padding: 10px;
+}
+
+.Vraagstellen{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    border: #6C3BAA 1px solid;
+    width: 45%;
+    height: 400px;
+    padding: 20px;
+    align-items: center;
+}
+
+.vraag-box{
+    padding: 10px;
+    flex-direction: column;
+}
+
+.text{
+    width: 500px;
+    height: 100px;
+}
+
+.send{
+    width: 90px;
+    height: 35px;
+    background-color: #6c3baa;
+    color: white;
+}
+
+
