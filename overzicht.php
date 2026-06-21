@@ -196,5 +196,6 @@ require_once 'crud/read/read.php';
 
     </footer>
 </body>
-<script src="functions/js/script.js"></script>
+<script src="functions/js/overzicht.js"></script>
+<script src="functions/js/index.js"></script>
 </html>
