@@ -13,7 +13,7 @@ require_once 'crud/read/read.php';
 
 <body>
     <header>
-
+    <!-- Header content here from index.php -->
     </header>
 
     <main>
@@ -197,5 +197,5 @@ require_once 'crud/read/read.php';
     </footer>
 </body>
 <script src="functions/js/overzicht.js"></script>
-<script src="functions/js/index.js"></script>
+
 </html>

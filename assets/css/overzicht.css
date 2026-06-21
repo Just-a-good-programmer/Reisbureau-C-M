@@ -10,6 +10,9 @@ main{
     justify-self: center;
 }
 
+
+
+/* Overview styling: */
 #selection-overview {
     display: flex;
     flex-direction: column;
