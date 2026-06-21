@@ -1,5 +1,5 @@
 <?php
-$conn = new PDO('mysql:host=db;dbname=carmitchreizen', 'user', 'password');
+require_once './crud/dbcall.php';
 $sql = $conn->prepare("SELECT * FROM Trip");
 $sql->execute();
 $result = $sql->fetchAll();
@@ -101,7 +101,7 @@ $result = $sql->fetchAll();
             </div>
             <div class="img-box">
                 <div class="tekst-img"> 5 tips voor jou vakantie</div>
-                <img class="img-settings" src="assets/img/familie-vakantie.jpg" alt=""
+                <img class="img-settings" src="assets/img/familie-vakantie.jpg" alt="">
             </div>
         </div>
     </div>
