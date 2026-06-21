@@ -48,10 +48,10 @@ $result = $sql->fetchAll();
         ?>
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="functions/over-ons.php">Over Ons</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a href="over-ons.php">Over Ons</a>
+        <a href="overzicht.php">Overzicht</a>
+        <a href="admin-login.php">Login</a>
+        <a href="contact.php">Contact</a>
     </div>
 
     <button class="openbtn" onclick="openNav()">☰</button>
@@ -112,17 +112,20 @@ $result = $sql->fetchAll();
         </div>
     </div>
     </div>
+    <nav>
 
-    <? foreach ($result as $tripItem) { ?>
-        <h3> <?php
-            echo $tripItem['Location'];
-            ?>
-        </h3>
-        <h3> <?php
-            echo $tripItem['Transport'];
-            ?>
-        </h3>
-    <? } ?>
+        <? foreach ($result as $tripItem) { ?>
+            <a href="overzicht.php"><h3> <?php
+                    echo $tripItem['Location'];
+                    ?>
+                </h3></a>
+            <a href="overzicht.php.php"><h3> <?php
+                    echo $tripItem['Transport'];
+                    ?>
+                </h3></a>
+        <? } ?>
+    </nav>
+
 
 </main>
 
