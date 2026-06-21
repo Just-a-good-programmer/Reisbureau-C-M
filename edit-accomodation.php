@@ -37,7 +37,9 @@ if (isset($_POST['opslaan'])) {
 <html>
 <body>
 
+<headers>
 <h1>Accomodation bewerken</h1>
+</headers>
 
 <div class="edit">
     <form method="post">

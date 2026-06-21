@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/over-ons.css">
 </head>
 
-<header>
+<headers>
     <h1>Over ons</h1>
-</header>
+</headers>
+
 
 <div class="site-info">
     <img src="assets/img/carmitch.png" alt="naam" class="naam">
@@ -48,8 +49,8 @@
 
 <div class="footer">
 
-        <div class="contact">
-            <h2>Contact</h2>
+        <div class="contactvakje">
+            <a class="contact" href="contact.php">Contact</a>
             <p class="vakje">e-mail</p>
             <p class="vakje">telefoonnummer</p>
         </div>

@@ -29,9 +29,9 @@ echo "Accomodation toegevoegd";
 
 <body>
 
-<header>
+<headers>
     <h1>Admin </h1>
-</header>
+</headers>
 
 <h1>Nieuw vlucht toevoegen</h1>
 

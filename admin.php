@@ -13,6 +13,10 @@ $sql = $conn->prepare("SELECT * FROM Trip");
 $sql->execute();
 $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
 
+$sql = $conn->prepare("SELECT * FROM User");
+$sql->execute();
+$User = $sql->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 
@@ -32,9 +36,45 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
     <h1>Admin </h1>
 </header>
 
+<div class="sidebar">
+        <ul>
+                <h1>Menu</h1>
+            <li>
+                <a href="index.php">
+                    <spawn class="icon"><i class="fa-solid fa-house"></i></spawn>
+                    <spawn class="text">Home</spawn>
+                </a>
+            <li>
+            <li>
+                <a href="admin.php#accomodations">
+                    <spawn class="icon"><i class="fa-solid fa-admin"></i></spawn>
+                    <spawn class="text">Accomodations</spawn>
+                </a>
+            <li>
+            <li>
+                <a href="admin.php#flights">
+                    <spawn class="icon"><i class="fa-solid fa-about-us"></i></spawn>
+                    <spawn class="text">Flights</spawn>
+                </a>
+            <li>
+            <li>
+                <a href="admin.php#trips">
+                    <spawn class="icon"><i class="fa-solid fa-house"></i></spawn>
+                    <spawn class="text">Trips</spawn>
+                </a>
+            <li>
+            <li>
+                <a href="admin.php#Users">
+                    <spawn class="icon"><i class="fa-solid fa-house"></i></spawn>
+                    <spawn class="text">Users</spawn>
+                </a>
+            <li>
+        <ul>
+    </div>
 
-    <h2>Beheer Accomodations</h2>
-    <a class="add-btn" href="add.php">✈️ Add Accomodations</a>
+
+    <h1 class="titel" id="accomodations" >Beheer Accomodations</h1>
+    <a class="add-btn" href="add-accomodation.php">Add Accomodations</a>
 
     <?php foreach ($Accomodations as $a): ?>
 
@@ -47,14 +87,16 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
         Persons: <?= $a['Persons'] ?><br>
     </div>
 
-    <a class="edit-btn" href="edit-accomodation.php?id=<?= $a['AccomodationID'] ?>">🛠️ Bewerken</a>
-    <a class="delete-btn" href="delete.php?id=<?= $a['AccomodationID'] ?>">🗑️ Delete</a>
+    <div class="buttons">
+       <a class="edit-btn" href="edit-accomodation.php?id=<?= $a['AccomodationID'] ?>">🛠️ Bewerken</a>
+       <a class="delete-btn" href="delete.php?id=<?= $a['AccomodationID'] ?>">🗑️ Delete</a>
+    </div>
 
     <?php endforeach; ?>
 
 
-    <h2>Beheer Vluchten</h2>
-    <a class="add-btn" href="add.php">✈️ Add Flight</a>
+    <h1 class="titel" id="flights">Beheer Flights</h1>
+    <a class="add-btn" href="add-flight.php">Add Flight</a>
 
     <?php foreach ($flights as $f): ?>
 
@@ -64,14 +106,16 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
     Transfers: <?= $f['Transfers'] ?><br>
     Duur: <?= $f['Duration'] ?> uur<br>
     </div>
-
-   <a class="edit-btn" href="edit-flight.php?id=<?= $f['FlightID'] ?>">🛠️ Bewerken</a>
-   <a class="delete-btn" href="delete.php?id=<?= $f['FlightID'] ?>">🗑️ Delete</a>
+    <div class="buttons">
+      <a class="edit-btn" href="edit-flight.php?id=<?= $f['FlightID'] ?>">🛠️ Bewerken</a>
+      <a class="delete-btn" href="delete.php?id=<?= $f['FlightID'] ?>">🗑️ Delete</a>
+    </div>
 
     <?php endforeach; ?>
 
-    <h2>Beheer Trip</h2>
-    <a class="add-btn" href="add.php">✈️ Add Trips</a>
+
+    <h1 class="titel" id="trips">Beheer Trips</h1>
+    <a class="add-btn" href="add-trip.php">Add Trips</a>
 
     <?php foreach ($Trip as $t): ?>
 
@@ -84,11 +128,31 @@ $Trip = $sql->fetchAll(PDO::FETCH_ASSOC);
         Transport: <?= $t['Transport'] ?><br>
         Price: <?= $t['Price'] ?><br>
     </div>
+    <div class="buttons">
+       <a class="edit-btn" href="edit-trip.php?id=<?= $t['TripID'] ?>">🛠️ Bewerken</a>
+       <a class="delete-btn" href="delete.php?id=<?= $t['TripID'] ?>">🗑️ Delete</a>
+    </div>
 
-    <a class="edit-btn" href="edit-trip.php?id=<?= $t['TripID'] ?>">🛠️ Bewerken</a>
-    <a class="delete-btn" href="delete.php?id=<?= $t['TripID'] ?>">🗑️ Delete</a>
+    <?php endforeach; ?>
 
-<?php endforeach; ?>
+
+    <h1 class="titel" id="Users">Beheer Users</h1>
+    <a class="add-btn" href="add-user.php">Add Trips</a>
+
+     <?php foreach ($User as $u): ?>
+
+    <div class="all-trips">
+        User ID: <?= $u['UserID'] ?><br>
+        Username: <?= $u['Username'] ?><br>
+        Password: <?= $u['Password'] ?><br>
+        Role: <?= $u['Role'] ?><br>
+    </div>
+    <div class="buttons">
+        <a class="edit-btn" href="edit-user.php?id=<?= $u['UserID'] ?>">🛠️ Bewerken</a>
+        <a class="delete-btn" href="delete.php?id=<?= $u['UserID'] ?>">🗑️ Delete</a>
+    </div>
+
+    <?php endforeach; ?>
 
 </body>
 </html>

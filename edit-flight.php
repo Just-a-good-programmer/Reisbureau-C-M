@@ -33,7 +33,9 @@ if (isset($_POST['opslaan'])) {
 <html>
 <body>
 
+<headers>
 <h1>Flight bewerken</h1>
+</headers>
 
 <form method="post">
     FlightNumber:
