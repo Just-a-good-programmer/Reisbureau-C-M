@@ -1,5 +1,8 @@
 <?php
-require_once 'crud/read/read.php';
+require_once './crud/dbcall.php';
+$sql = $conn->prepare("SELECT * FROM Trip");
+$sql->execute();
+$result = $sql->fetchAll();
 ?>
 
 
@@ -10,6 +13,7 @@ require_once 'crud/read/read.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hoofdpagina</title>
     <link rel="stylesheet" href="assets/css/index.css">
+    <script src="functions/js/index.js"></script>
 
 
 </head>
@@ -44,10 +48,10 @@ require_once 'crud/read/read.php';
         ?>
 
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-        <a href="over-ons.php">Over Ons</a>
-        <a href="overzicht.php">Overzicht</a>
-        <a href=admin-login.php"">Login</a>
-        <a href="contact.php">Contact</a>
+        <a href="functions/over-ons.php">Over Ons</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
     </div>
 
     <button class="openbtn" onclick="openNav()">☰</button>
@@ -97,7 +101,7 @@ require_once 'crud/read/read.php';
             </div>
             <div class="img-box">
                 <div class="tekst-img"> 5 tips voor jou vakantie</div>
-                <img class="img-settings" src="assets/img/familie-vakantie.jpg" alt=""
+                <img class="img-settings" src="assets/img/familie-vakantie.jpg" alt="">
             </div>
         </div>
     </div>
@@ -108,16 +112,17 @@ require_once 'crud/read/read.php';
         </div>
     </div>
     </div>
-    <div class="flexbox-setting">
-        <? foreach ($result as $tripItem) { ?>
-            <nav class="searchbutton flexbox-setting">
-                <a href="overzicht.php"><?php echo $tripItem['Location']; ?></a>
-            </nav>
-            <nav class="searchbutton flexbox-setting">
-                <a href="overzicht.php"><?php echo $tripItem['Transport']; ?></a>
-            </nav>
-        <? } ?>
-    </div>
+
+    <? foreach ($result as $tripItem) { ?>
+        <h3> <?php
+            echo $tripItem['Location'];
+            ?>
+        </h3>
+        <h3> <?php
+            echo $tripItem['Transport'];
+            ?>
+        </h3>
+    <? } ?>
 
 </main>
 
@@ -126,7 +131,4 @@ require_once 'crud/read/read.php';
 
 </footer>
 </body>
-
-<script src="functions/js/index.js"></script>
-
 </html>

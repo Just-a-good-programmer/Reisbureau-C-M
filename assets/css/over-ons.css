@@ -1,3 +1,13 @@
+headers {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
 .site-info {
     flex-direction: column;
     margin-bottom: 40px;
@@ -42,7 +52,7 @@
     align-items: center;
     display: flex;
 }
-.contact {
+.contactvakje {
     border: #6c3baa solid 1px;
     padding: 10px;
     line-height: 7px;
@@ -54,6 +64,13 @@
     border-radius: 10px;
     background-color: #F0EFE8;
 }
+
+.contact{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
 .afspraak{
     border: #6c3baa solid 1px;
     padding: 10px;
@@ -90,3 +107,7 @@
     border-radius: 10px;
     background-color: #F0EFE8;
 }
+
+
+
+

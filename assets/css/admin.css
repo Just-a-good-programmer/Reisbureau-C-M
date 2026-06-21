@@ -16,6 +16,16 @@ header {
     display: flex;
     align-items: center;
     margin-bottom: 40px;
+    margin-left: 13%;
+}
+headers {
+    background-color: #6C3BAA;
+    color: white;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
 }
 
 .terug-btn{
@@ -24,6 +34,11 @@ header {
     color: white;
     margin-left: 6px;
     text-decoration: none;
+}
+
+.titel{
+    display: flex;
+    justify-self: center;
 }
 
 .accomodation{
@@ -67,6 +82,7 @@ header {
     display: inline-block;
     justify-content: center;
     align-content: center;
+    margin-left: 25%;
 }
 
 .delete-btn{
@@ -80,6 +96,7 @@ header {
     text-decoration: none;
     background-color: #6c3baa;
     color: white;
+    margin-left: 25%;
 }
 
 .all-accomodations{
@@ -88,6 +105,7 @@ header {
     width: 50%;
     border: #6c3baa solid 1px;
     flex-direction: row;
+    justify-self: center;
 }
 
 .all-flights{
@@ -96,6 +114,7 @@ header {
     width: 50%;
     border: #6c3baa solid 1px;
     flex-direction: row;
+    justify-self: center;
 }
 
 .all-trips{
@@ -104,4 +123,49 @@ header {
     width: 50%;
     border: #6c3baa solid 1px;
     flex-direction: row;
+    justify-self: center;
 }
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    z-index: 1;
+    background: #6C3BAA;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.6s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar ul li{
+    list-style: none;
+    margin: 5px 0;
+}
+
+.sidebar ul li:hover{
+    background: #ff6b00;
+    transition: 0.3s ease;
+}
+
+.sidebar ul li a {
+    position: relative;
+    display: flex;
+    white-space: nowrap;
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar ul li a .text{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+}
+
